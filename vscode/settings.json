@@ -14,7 +14,6 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
-  "notebook.defaultFormatter": "biomejs.biome",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
