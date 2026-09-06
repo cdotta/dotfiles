@@ -1,3 +1,6 @@
+[settings]
+idiomatic_version_file_enable_tools = ["node", "ruby"]
+
 [tools]
 node = "24"
 pnpm = "10"
