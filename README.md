@@ -4,34 +4,31 @@ zsh + antidote + starship + mise, in Ghostty. VS Code settings.
 
 ## New Mac
 
-```sh
-xcode-select --install
-git clone https://github.com/cdotta/dotfiles ~/Projects/own/dotfiles
-~/Projects/own/dotfiles/install.sh
-```
+1. Install 1Password, sign in, Settings → Developer → "Use the SSH agent".
+   The GitHub SSH key lives in the vault and signs commits too.
+2. `xcode-select --install`
+3. `~/.ssh/config`, mode 600:
 
-`install.sh` installs Homebrew if missing, runs the Brewfile, symlinks every
-config into place, installs node/pnpm/ruby via mise.
-It is safe to re-run.
+   ```
+   Host github.com
+     IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+   ```
 
-Then, by hand, the things that must not live in a repo:
+4. ```sh
+   git clone git@github.com:cdotta/dotfiles ~/Projects/own/dotfiles
+   ~/Projects/own/dotfiles/install.sh
+   ```
 
-```sh
-gh auth login
-gpg --import key.asc          # exported from the old Mac, then delete the file
-gpg --edit-key 479C4F2FB405E6E2 trust   # 5, ultimate
-curl -fsSL https://claude.ai/install.sh | bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
+   Installs Homebrew if missing, runs the Brewfile, symlinks every config into
+   place, installs node/pnpm/ruby via mise and three VS Code extensions. Safe to
+   re-run.
 
-Copy `~/.ssh/id_ed25519`, its `.pub` and `~/.ssh/config` over AirDrop, or make
-a new key and add it to GitHub. Open Ghostty.
+5. `gh auth login`, SSH, skip the key upload. Then:
 
-## Old Mac, before wiping
+   ```sh
+   curl -fsSL https://claude.ai/install.sh | bash
+   curl -LsSf https://astral.sh/uv/install.sh | sh
+   ```
 
-```sh
-gpg --export-secret-keys --armor 479C4F2FB405E6E2 > key.asc
-```
-
-`~/.zsh_history` is worth carrying over too. It contains secrets, so AirDrop,
-never the repo.
+Open Ghostty. `~/.zsh_history` is worth carrying over by AirDrop; it contains
+secrets, so never the repo.

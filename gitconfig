@@ -1,7 +1,11 @@
 [user]
 	name = crisis
 	email = cdotta90@gmail.com
-	signingkey = 479C4F2FB405E6E2
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEW97aVV6y/KCxT+puDtbSllciRvBV1+iCNjLNH6hx+e
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 [commit]
 	gpgsign = true
 [tag]
