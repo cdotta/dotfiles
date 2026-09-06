@@ -1,0 +1,33 @@
+{
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.formatOnSave": true,
+  "files.trimTrailingWhitespace": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "prisma.showPrismaDataPlatformNotification": false,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "notebook.defaultFormatter": "biomejs.biome",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "git.openRepositoryInParentFolders": "never",
+  "editor.wordWrapColumn": 300,
+  "claudeCode.preferredLocation": "panel",
+  "prisma.hidePrisma6Prompts": true,
+  "editor.quickSuggestions": {
+    "other": "offWhenInlineCompletions",
+    "comments": "off",
+    "strings": "off",
+  },
+  // "editor.quickSuggestions": "off",
+  "chat.disableAIFeatures": true,
+}
