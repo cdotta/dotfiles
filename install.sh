@@ -4,7 +4,7 @@ cd "$(dirname "$0")"
 command -v brew >/dev/null || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 brew bundle --file Brewfile
-mkdir -p ~/.config/git ~/.config/mise ~/.config/ghostty
+mkdir -p ~/.config/git ~/.config/mise ~/.config/ghostty "$HOME/Library/Application Support/Code/User"
 ln -sf "$PWD/zshrc" ~/.zshrc
 ln -sf "$PWD/zsh_plugins.txt" ~/.zsh_plugins.txt
 ln -sf "$PWD/gitconfig" ~/.gitconfig
