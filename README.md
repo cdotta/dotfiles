@@ -1,6 +1,6 @@
 # dotfiles
 
-zsh + antidote + starship + mise, in Ghostty. VS Code settings and extensions.
+zsh + antidote + starship + mise, in Ghostty. VS Code settings.
 
 ## New Mac
 
@@ -11,7 +11,7 @@ git clone https://github.com/cdotta/dotfiles ~/Projects/own/dotfiles
 ```
 
 `install.sh` installs Homebrew if missing, runs the Brewfile, symlinks every
-config into place, installs node/pnpm/ruby via mise and the VS Code extensions.
+config into place, installs node/pnpm/ruby via mise.
 It is safe to re-run.
 
 Then, by hand, the things that must not live in a repo:
